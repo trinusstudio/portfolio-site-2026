@@ -89,37 +89,42 @@
   <section id="work" class="work">
     <div class="section-head">
       <h2>Selected work</h2>
-      <p>Click any piece to watch. Each one opens in a focused player.</p>
+      <p>Click a project to open its folder — each holds up to 5 vertical clips.</p>
     </div>
 
     <!--
-      WORK GRID — 5 placeholder slots.
-      To embed a real video, edit the .work-card below and set ONE of:
+      WORK GRID — 5 project "folders". Clicking a card opens its <template>
+      below, showing a grid of 5 vertical (9:16) clip slots.
+
+      To fill a slot with a real video, find its matching <div class="folder-slot">
+      inside the template with the same project name, and set ONE of:
         data-embed-type="youtube" data-embed-src="VIDEO_ID"
         data-embed-type="vimeo"   data-embed-src="VIDEO_ID"
-        data-embed-type="file"    data-embed-src="videos/my-file.mp4"
-      Also update data-label (shown under the thumbnail) and the poster
-      image via the inline background-image style on .work-thumb, e.g.
-      style="background-image:url('videos/my-thumb.jpg')"
+        data-embed-type="file"    data-embed-src="videos/my-clip.mp4"
+      Once a slot has a type/src, it plays that clip on click instead of
+      showing the "Clip N ▶" placeholder.
+
+      You can also rename "Project 01" etc. — just keep the data-group on
+      the button matching the id="" on its <template> below.
     -->
     <div class="work-grid">
-      <button type="button" class="work-card" data-embed-type="" data-embed-src="" data-label="Project 01">
+      <button type="button" class="work-card" data-group="group-1" data-label="Project 01">
         <div class="work-thumb"></div>
         <div class="work-meta"><span>Project 01</span><span class="work-play">▶</span></div>
       </button>
-      <button type="button" class="work-card" data-embed-type="" data-embed-src="" data-label="Project 02">
+      <button type="button" class="work-card" data-group="group-2" data-label="Project 02">
         <div class="work-thumb"></div>
         <div class="work-meta"><span>Project 02</span><span class="work-play">▶</span></div>
       </button>
-      <button type="button" class="work-card" data-embed-type="" data-embed-src="" data-label="Project 03">
+      <button type="button" class="work-card" data-group="group-3" data-label="Project 03">
         <div class="work-thumb"></div>
         <div class="work-meta"><span>Project 03</span><span class="work-play">▶</span></div>
       </button>
-      <button type="button" class="work-card" data-embed-type="" data-embed-src="" data-label="Project 04">
+      <button type="button" class="work-card" data-group="group-4" data-label="Project 04">
         <div class="work-thumb"></div>
         <div class="work-meta"><span>Project 04</span><span class="work-play">▶</span></div>
       </button>
-      <button type="button" class="work-card" data-embed-type="" data-embed-src="" data-label="Project 05">
+      <button type="button" class="work-card" data-group="group-5" data-label="Project 05">
         <div class="work-thumb"></div>
         <div class="work-meta"><span>Project 05</span><span class="work-play">▶</span></div>
       </button>
@@ -128,10 +133,116 @@
     <a href="#" class="work-case-link">Read the Transformer Table case study →</a>
   </section>
 
-  <!-- Lightbox: opens when a work card is clicked -->
+  <!-- Folder contents: 5 vertical clip slots per project. Edit data-embed-type / data-embed-src per slot. -->
+  <template id="group-1">
+    <div class="folder-header">Project 01 — 5 clips</div>
+    <div class="folder-grid">
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 1<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 2<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 3<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 4<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 5<br>▶</div>
+      </div>
+    </div>
+  </template>
+
+  <template id="group-2">
+    <div class="folder-header">Project 02 — 5 clips</div>
+    <div class="folder-grid">
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 1<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 2<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 3<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 4<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 5<br>▶</div>
+      </div>
+    </div>
+  </template>
+
+  <template id="group-3">
+    <div class="folder-header">Project 03 — 5 clips</div>
+    <div class="folder-grid">
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 1<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 2<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 3<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 4<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 5<br>▶</div>
+      </div>
+    </div>
+  </template>
+
+  <template id="group-4">
+    <div class="folder-header">Project 04 — 5 clips</div>
+    <div class="folder-grid">
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 1<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 2<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 3<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 4<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 5<br>▶</div>
+      </div>
+    </div>
+  </template>
+
+  <template id="group-5">
+    <div class="folder-header">Project 05 — 5 clips</div>
+    <div class="folder-grid">
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 1<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 2<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 3<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 4<br>▶</div>
+      </div>
+      <div class="folder-slot" data-embed-type="" data-embed-src="">
+        <div class="folder-slot-empty">Clip 5<br>▶</div>
+      </div>
+    </div>
+  </template>
+
+  <!-- Lightbox: opens when a work card is clicked, shows that project's folder of clips -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <div class="lightbox-backdrop" data-close></div>
-    <div class="lightbox-panel">
+    <div class="lightbox-panel lightbox-panel--folder">
       <button type="button" class="lightbox-close" data-close aria-label="Close">✕</button>
       <div class="lightbox-media" id="lightboxMedia"></div>
     </div>
