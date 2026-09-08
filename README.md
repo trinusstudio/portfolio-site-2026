@@ -12,16 +12,19 @@
 4. Deploy — future pushes to the repo auto-update the live site
 
 ## How to add your videos to the Work section
-Each of the 5 placeholder cards in `index.html` (search for `Project 01` etc.) looks like this:
+Each of the 5 cards in the Work section is a **project folder**. Clicking one opens a
+gallery of 5 vertical (9:16) clip slots — click any clip slot to play it.
+
+In `index.html`, scroll to the `<template id="group-1">` blocks (one per project, `group-1`
+through `group-5`). Each contains 5 `.folder-slot` divs like this:
 
 ```html
-<button type="button" class="work-card" data-embed-type="" data-embed-src="" data-label="Project 01">
-  <div class="work-thumb"></div>
-  <div class="work-meta"><span>Project 01</span><span class="work-play">▶</span></div>
-</button>
+<div class="folder-slot" data-embed-type="" data-embed-src="">
+  <div class="folder-slot-empty">Clip 1<br>▶</div>
+</div>
 ```
 
-Fill in `data-embed-type` and `data-embed-src` depending on where the video lives:
+Fill in `data-embed-type` and `data-embed-src` depending on where that clip lives:
 
 **YouTube (unlisted is fine)**
 ```html
@@ -37,14 +40,16 @@ data-embed-type="vimeo" data-embed-src="123456789"
 
 **A video file you host yourself**
 ```html
-data-embed-type="file" data-embed-src="videos/crossian-ad.mp4"
+data-embed-type="file" data-embed-src="videos/crossian-clip1.mp4"
 ```
-Put the actual `.mp4` file in a `videos/` folder next to `index.html`.
+Put the actual `.mp4` file in a `videos/` folder next to `index.html`. Export/crop these as
+vertical 9:16 (e.g. 1080×1920) so they match the slot shape.
 
-Also:
-- Rename the card label — change `Project 01` in both `data-label` and the visible `<span>` to the real project/brand name
-- Give each card a thumbnail image so it doesn't look empty before clicking: add `style="background-image:url('videos/crossian-thumb.jpg')"` to that card's `.work-thumb` div
-- Clicking a card opens a pop-up player (lightbox) — clients can watch without leaving the page. Cards with no embed set yet just show a friendly placeholder message instead of breaking.
+A slot with no type/src set just shows "no video set yet" when clicked — it won't break.
+
+To rename a project, change the `data-label` and visible text on its `.work-card` button,
+and the `folder-header` text inside its matching `<template>`. Leave `data-group="group-1"`
+matching `id="group-1"` on the template — that's what links the card to its folder.
 
 ## Other things to swap in before going live
 - Replace `YOUR-EMAIL-HERE` in the Contact section's `mailto:` link with your real email
