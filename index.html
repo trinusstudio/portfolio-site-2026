@@ -6,7 +6,7 @@
 <title>Marcel — AI Creative Production for DTC Brands</title>
 <meta name="description" content="Founder-led AI creative studio producing UGC ad video for DTC and e-commerce brands running paid ads.">
 <link rel="preconnect" href="https://api.fontshare.com">
-<link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,700&f[]=general-sans@400&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=general-sans@500,600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,7 +15,7 @@
 <div class="glow"></div>
 
 <header class="nav">
-  <a href="#top" class="nav-mark">MARCEL</a>
+  <a href="#top" class="nav-mark">Miguel Marcel</a>
   <nav class="nav-links">
     <a href="#process">Process</a>
     <a href="#work">Work</a>
@@ -49,6 +49,9 @@
     </div>
     <ol class="process-list">
       <li class="process-item">
+        <div class="process-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h1"/></svg>
+        </div>
         <span class="process-num">01</span>
         <div>
           <h3>Brief</h3>
@@ -56,6 +59,9 @@
         </div>
       </li>
       <li class="process-item">
+        <div class="process-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 2a6 6 0 0 0-4 10.5c.5.5 1 1.5 1 2.5h6c0-1 .5-2 1-2.5A6 6 0 0 0 12 2z"/></svg>
+        </div>
         <span class="process-num">02</span>
         <div>
           <h3>Concept</h3>
@@ -63,6 +69,9 @@
         </div>
       </li>
       <li class="process-item">
+        <div class="process-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg>
+        </div>
         <span class="process-num">03</span>
         <div>
           <h3>Production</h3>
@@ -70,6 +79,9 @@
         </div>
       </li>
       <li class="process-item">
+        <div class="process-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
         <span class="process-num">04</span>
         <div>
           <h3>QA</h3>
@@ -77,6 +89,9 @@
         </div>
       </li>
       <li class="process-item">
+        <div class="process-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
+        </div>
         <span class="process-num">05</span>
         <div>
           <h3>Delivery</h3>
@@ -102,7 +117,7 @@
         data-embed-type="vimeo"   data-embed-src="VIDEO_ID"
         data-embed-type="file"    data-embed-src="videos/my-clip.mp4"
       Once a slot has a type/src, it plays that clip on click instead of
-      showing the "Clip N ▶" placeholder.
+      showing the "Clip N <span class="icon-play"></span>" placeholder.
 
       You can also rename "Project 01" etc. — just keep the data-group on
       the button matching the id="" on its <template> below.
@@ -110,27 +125,25 @@
     <div class="work-grid">
       <button type="button" class="work-card" data-group="group-1" data-label="Project 01">
         <div class="work-thumb"></div>
-        <div class="work-meta"><span>Project 01</span><span class="work-play">▶</span></div>
+        <div class="work-meta"><span>Project 01</span><span class="work-play"><span class="icon-play"></span></span></div>
       </button>
       <button type="button" class="work-card" data-group="group-2" data-label="Project 02">
         <div class="work-thumb"></div>
-        <div class="work-meta"><span>Project 02</span><span class="work-play">▶</span></div>
+        <div class="work-meta"><span>Project 02</span><span class="work-play"><span class="icon-play"></span></span></div>
       </button>
       <button type="button" class="work-card" data-group="group-3" data-label="Project 03">
         <div class="work-thumb"></div>
-        <div class="work-meta"><span>Project 03</span><span class="work-play">▶</span></div>
+        <div class="work-meta"><span>Project 03</span><span class="work-play"><span class="icon-play"></span></span></div>
       </button>
       <button type="button" class="work-card" data-group="group-4" data-label="Project 04">
         <div class="work-thumb"></div>
-        <div class="work-meta"><span>Project 04</span><span class="work-play">▶</span></div>
+        <div class="work-meta"><span>Project 04</span><span class="work-play"><span class="icon-play"></span></span></div>
       </button>
       <button type="button" class="work-card" data-group="group-5" data-label="Project 05">
         <div class="work-thumb"></div>
-        <div class="work-meta"><span>Project 05</span><span class="work-play">▶</span></div>
+        <div class="work-meta"><span>Project 05</span><span class="work-play"><span class="icon-play"></span></span></div>
       </button>
     </div>
-
-    <a href="#" class="work-case-link">Read the Transformer Table case study →</a>
   </section>
 
   <!-- Folder contents: 5 vertical clip slots per project. Edit data-embed-type / data-embed-src per slot. -->
@@ -138,19 +151,19 @@
     <div class="folder-header">Project 01 — 5 clips</div>
     <div class="folder-grid">
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 1<br>▶</div>
+        <div class="folder-slot-empty">Clip 1<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 2<br>▶</div>
+        <div class="folder-slot-empty">Clip 2<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 3<br>▶</div>
+        <div class="folder-slot-empty">Clip 3<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 4<br>▶</div>
+        <div class="folder-slot-empty">Clip 4<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 5<br>▶</div>
+        <div class="folder-slot-empty">Clip 5<br><span class="icon-play"></span></div>
       </div>
     </div>
   </template>
@@ -159,19 +172,19 @@
     <div class="folder-header">Project 02 — 5 clips</div>
     <div class="folder-grid">
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 1<br>▶</div>
+        <div class="folder-slot-empty">Clip 1<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 2<br>▶</div>
+        <div class="folder-slot-empty">Clip 2<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 3<br>▶</div>
+        <div class="folder-slot-empty">Clip 3<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 4<br>▶</div>
+        <div class="folder-slot-empty">Clip 4<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 5<br>▶</div>
+        <div class="folder-slot-empty">Clip 5<br><span class="icon-play"></span></div>
       </div>
     </div>
   </template>
@@ -180,19 +193,19 @@
     <div class="folder-header">Project 03 — 5 clips</div>
     <div class="folder-grid">
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 1<br>▶</div>
+        <div class="folder-slot-empty">Clip 1<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 2<br>▶</div>
+        <div class="folder-slot-empty">Clip 2<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 3<br>▶</div>
+        <div class="folder-slot-empty">Clip 3<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 4<br>▶</div>
+        <div class="folder-slot-empty">Clip 4<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 5<br>▶</div>
+        <div class="folder-slot-empty">Clip 5<br><span class="icon-play"></span></div>
       </div>
     </div>
   </template>
@@ -201,19 +214,19 @@
     <div class="folder-header">Project 04 — 5 clips</div>
     <div class="folder-grid">
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 1<br>▶</div>
+        <div class="folder-slot-empty">Clip 1<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 2<br>▶</div>
+        <div class="folder-slot-empty">Clip 2<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 3<br>▶</div>
+        <div class="folder-slot-empty">Clip 3<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 4<br>▶</div>
+        <div class="folder-slot-empty">Clip 4<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 5<br>▶</div>
+        <div class="folder-slot-empty">Clip 5<br><span class="icon-play"></span></div>
       </div>
     </div>
   </template>
@@ -222,19 +235,19 @@
     <div class="folder-header">Project 05 — 5 clips</div>
     <div class="folder-grid">
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 1<br>▶</div>
+        <div class="folder-slot-empty">Clip 1<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 2<br>▶</div>
+        <div class="folder-slot-empty">Clip 2<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 3<br>▶</div>
+        <div class="folder-slot-empty">Clip 3<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 4<br>▶</div>
+        <div class="folder-slot-empty">Clip 4<br><span class="icon-play"></span></div>
       </div>
       <div class="folder-slot" data-embed-type="" data-embed-src="">
-        <div class="folder-slot-empty">Clip 5<br>▶</div>
+        <div class="folder-slot-empty">Clip 5<br><span class="icon-play"></span></div>
       </div>
     </div>
   </template>
@@ -252,17 +265,20 @@
     <div class="section-head">
       <h2>About</h2>
     </div>
-    <div class="about-body">
-      <p>
-        I'm a founder-led AI creative studio, not an agency roster. Day-to-day, I produce high-volume UGC ad
-        video for DTC and e-commerce brands, trained under a multi-layer QA chain — self-QA, team lead QA,
-        then account QA — built to catch hallucinations, product inaccuracies, and brief mismatches before
-        anything ships.
-      </p>
-      <p>
-        That same discipline runs through independent client work: locked character builds, brand-specific
-        prompt systems, and a production process that treats an AI pipeline like a crew, not a shortcut.
-      </p>
+    <div class="about-grid">
+      <img src="assets/marcel-portrait.jpg" alt="Portrait of Miguel Marcel" class="about-photo">
+      <div class="about-body">
+        <p>
+          I'm a founder-led AI creative studio, not an agency roster. Day-to-day, I produce high-volume UGC ad
+          video for DTC and e-commerce brands, trained under a multi-layer QA chain — self-QA, team lead QA,
+          then account QA — built to catch hallucinations, product inaccuracies, and brief mismatches before
+          anything ships.
+        </p>
+        <p>
+          That same discipline runs through independent client work: locked character builds, brand-specific
+          prompt systems, and a production process that treats an AI pipeline like a crew, not a shortcut.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -295,19 +311,42 @@
   </section>
 
   <section id="contact" class="contact">
-    <h2>Start with a batch</h2>
-    <p>Tell me about the product and what's already been tried. I'll follow up to book a short call.</p>
-    <div class="contact-actions">
-      <a href="mailto:marcelonmotion@gmail.com" class="btn-primary">Email me</a>
-      <a href="https://wa.me/639473755817" target="_blank" rel="noopener" class="btn-ghost">WhatsApp</a>
+    <div class="contact-card">
+      <h2 class="contact-headline">Ready for ad creative<br>that doesn't go stale?</h2>
+      <p class="contact-sub">Tell me about the product and what's already been tried — I'll follow up to book a short call.</p>
+      <div class="contact-actions">
+        <a href="mailto:marcelonmotion@gmail.com" class="btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          Email me
+        </a>
+        <a href="https://wa.me/639473755817" target="_blank" rel="noopener" class="btn-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M21 11.5a8.5 8.5 0 0 1-11.8 7.8L3 21l1.7-6.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+      <div class="contact-divider"></div>
+      <div class="contact-meta">
+        <span>Currently taking on new batches</span>
+        <span>AI Video Production · UGC Ad Creative</span>
+      </div>
     </div>
   </section>
 
 </main>
 
 <footer class="footer">
-  <span>© <span id="year"></span> Marcel</span>
-  <a href="https://instagram.com/marcelonmotion" target="_blank" rel="noopener">@marcelonmotion</a>
+  <span class="footer-brand">AI Video Producer — Miguel Marcel — <span id="year"></span></span>
+  <div class="footer-socials">
+    <a href="mailto:marcelonmotion@gmail.com" aria-label="Email">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+    </a>
+    <a href="https://wa.me/639473755817" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M21 11.5a8.5 8.5 0 0 1-11.8 7.8L3 21l1.7-6.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+    </a>
+    <a href="https://instagram.com/marcelonmotion" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><path d="M17.5 6.5h.01"/></svg>
+    </a>
+  </div>
 </footer>
 
 <script src="script.js"></script>
