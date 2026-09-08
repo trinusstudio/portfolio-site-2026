@@ -52,7 +52,12 @@ and the `folder-header` text inside its matching `<template>`. Leave `data-group
 matching `id="group-1"` on the template — that's what links the card to its folder.
 
 ## Other things to swap in before going live
-- Replace `YOUR-EMAIL-HERE` in the Contact section's `mailto:` link with your real email
-- Add the actual Transformer Table case study link
 - Review the Process / About / FAQ copy — it's drafted from your positioning notes, not final copy
 - Add a favicon and social preview image (Open Graph tags) once you have brand assets
+
+## Uploading to GitHub — don't forget the assets folder
+This version includes an `assets/` folder with your portrait photo (`marcel-portrait.jpg`),
+used in the About section. When you upload files to GitHub, make sure to create that
+`assets` folder in the repo too and put the image inside it — GitHub's upload box lets you
+drag a whole folder in, or you can create the folder first by naming a file `assets/marcel-portrait.jpg`
+during upload (GitHub will create the folder automatically).
