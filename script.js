@@ -17,6 +17,32 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach((section) => observer.observe(section));
 
+// Scroll-reveal animations — fade/rise elements into view as they're scrolled to
+const revealSelectors = '.section-head, .work-card, .about-photo, .about-body, .faq-item, .process-item';
+const revealTargets = document.querySelectorAll(revealSelectors);
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (prefersReducedMotion) {
+  revealTargets.forEach((el) => el.classList.add('is-visible'));
+} else {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+
+  revealTargets.forEach((el, i) => {
+    // Stagger process items slightly so they don't all pop at once
+    if (el.classList.contains('process-item')) {
+      el.style.transitionDelay = `${(i % 5) * 60}ms`;
+    }
+    revealObserver.observe(el);
+  });
+}
+
 // Work lightbox — opens a project "folder" of up to 5 vertical clips
 const lightbox = document.getElementById('lightbox');
 const lightboxMedia = document.getElementById('lightboxMedia');
