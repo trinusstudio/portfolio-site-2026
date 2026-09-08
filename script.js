@@ -17,28 +17,50 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach((section) => observer.observe(section));
 
-// Work lightbox
+// Work lightbox — opens a project "folder" of up to 5 vertical clips
 const lightbox = document.getElementById('lightbox');
 const lightboxMedia = document.getElementById('lightboxMedia');
 const workCards = document.querySelectorAll('.work-card');
 
-function openLightbox(card) {
-  const type = card.getAttribute('data-embed-type');
-  const src = card.getAttribute('data-embed-src');
-  const label = card.getAttribute('data-label') || 'This piece';
-
-  let mediaHTML = '';
+function embedHTML(type, src) {
   if (type === 'youtube' && src) {
-    mediaHTML = `<iframe src="https://www.youtube.com/embed/${src}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
-  } else if (type === 'vimeo' && src) {
-    mediaHTML = `<iframe src="https://player.vimeo.com/video/${src}?autoplay=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
-  } else if (type === 'file' && src) {
-    mediaHTML = `<video src="${src}" controls autoplay playsinline></video>`;
+    return `<iframe src="https://www.youtube.com/embed/${src}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+  }
+  if (type === 'vimeo' && src) {
+    return `<iframe src="https://player.vimeo.com/video/${src}?autoplay=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+  }
+  if (type === 'file' && src) {
+    return `<video src="${src}" controls autoplay playsinline></video>`;
+  }
+  return null;
+}
+
+function openLightbox(card) {
+  const groupId = card.getAttribute('data-group');
+  const template = document.getElementById(groupId);
+
+  if (!template) {
+    lightboxMedia.innerHTML = `<div class="lightbox-empty">No folder found for this project yet.</div>`;
   } else {
-    mediaHTML = `<div class="lightbox-empty">${label} — add a video source in index.html (data-embed-type / data-embed-src) to make this playable.</div>`;
+    lightboxMedia.innerHTML = '';
+    lightboxMedia.appendChild(template.content.cloneNode(true));
+
+    // Wire up each clip slot: click to load and play that clip
+    lightboxMedia.querySelectorAll('.folder-slot').forEach((slot, i) => {
+      slot.addEventListener('click', () => {
+        const type = slot.getAttribute('data-embed-type');
+        const src = slot.getAttribute('data-embed-src');
+        const html = embedHTML(type, src);
+        if (html) {
+          slot.innerHTML = html;
+        } else {
+          slot.querySelector('.folder-slot-empty').innerHTML =
+            `Clip ${i + 1}<br><span style="font-size:11px">no video set yet</span>`;
+        }
+      }, { once: false });
+    });
   }
 
-  lightboxMedia.innerHTML = mediaHTML;
   lightbox.classList.add('is-open');
   lightbox.setAttribute('aria-hidden', 'false');
 }
