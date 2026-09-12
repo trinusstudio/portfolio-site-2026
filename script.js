@@ -18,7 +18,7 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach((section) => observer.observe(section));
 
 // Scroll-reveal animations — fade/rise elements into view as they're scrolled to
-const revealSelectors = '.section-head, .work-card, .about-photo, .about-body, .faq-item, .process-item';
+const revealSelectors = '.section-head, .work-card, .about-photo, .about-body, .faq-item, .stat-block, .qa-step';
 const revealTargets = document.querySelectorAll(revealSelectors);
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -35,9 +35,9 @@ if (prefersReducedMotion) {
   }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
 
   revealTargets.forEach((el, i) => {
-    // Stagger process items slightly so they don't all pop at once
-    if (el.classList.contains('process-item')) {
-      el.style.transitionDelay = `${(i % 5) * 60}ms`;
+    // Stagger stat blocks and QA steps slightly so they don't all pop at once
+    if (el.classList.contains('stat-block') || el.classList.contains('qa-step')) {
+      el.style.transitionDelay = `${(i % 4) * 80}ms`;
     }
     revealObserver.observe(el);
   });
